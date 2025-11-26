@@ -8,44 +8,55 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      text-align: center;
       background: #ffffff;
+      font-family: Aptos, Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+      text-align: center;
     }
 
     h1 {
-      margin: 30px 0 20px;
+      margin: 30px 0 40px;
       font-size: 28px;
-      letter-spacing: 1px;
       font-weight: 600;
+      letter-spacing: 1px;
     }
 
-    .section {
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    .section img {
-      width: 100%;
+    /* Page container */
+    .wrapper {
       max-width: 1400px;
-      height: auto;
-      transition: transform 0.5s ease; /* enables hover animation */
+      margin: 0 auto;
+      padding: 0 16px 60px;
     }
 
-    /* Hover zoom on the FIRST image ONLY */
-    .clickable:hover img {
+    /* Hero image blocks */
+    .hero-block {
+      position: relative;
+      margin-bottom: 60px;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-height: 650px;
+      object-fit: cover;
+      border-radius: 16px;
+      transition: transform 0.5s ease;
+    }
+
+    /* Hover zoom only on the clickable one */
+    .clickable:hover .hero-img {
       transform: scale(1.03);
       cursor: pointer;
     }
 
+    /* Label styling */
     .label {
       position: absolute;
-      bottom: 20px;
+      bottom: 30px;
       left: 40px;
-      font-size: 38px;
+      font-size: 40px;
       font-weight: 700;
       color: black;
-      text-shadow: 0 0 10px rgba(255,255,255,0.8);
+      text-shadow: 0 0 10px rgba(255,255,255,0.9);
+      letter-spacing: 0.02em;
     }
   </style>
 </head>
@@ -54,20 +65,20 @@
 
   <h1>FAST TRACK GROUP</h1>
 
-  <!-- Regional Malls (clickable with hover animation) -->
-  <a href="https://www.fastrackgroup.co.nz/regionalmalls/" class="section clickable">
-    <div style="position: relative; display: inline-block;">
-      <img src="hamilton-perspective.jpg" alt="Regional Malls">
-      <div class="label">REGIONAL MALLS</div>
-    </div>
-  </a>
+  <div class="wrapper">
 
-  <!-- Club 55 (not clickable, no hover) -->
-  <div class="section">
-    <div style="position: relative; display: inline-block;">
-      <img src="ai-c55-otaki.jpg" alt="Club 55">
+    <!-- Regional Malls (clickable) -->
+    <a href="https://www.fastrackgroup.co.nz/regionalmalls/" class="hero-block clickable">
+      <img src="hamilton-perspective.jpg" class="hero-img" alt="Regional Malls">
+      <div class="label">REGIONAL MALLS</div>
+    </a>
+
+    <!-- Club 55 (not clickable) -->
+    <div class="hero-block">
+      <img src="ai-c55-otaki.jpg" class="hero-img" alt="Club 55">
       <div class="label">CLUB 55</div>
     </div>
+
   </div>
 
 </body>
