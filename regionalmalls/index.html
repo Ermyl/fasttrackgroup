@@ -19,6 +19,42 @@
 </head>
 <body class="bg-white text-neutral-900">
 
+  <!-- Password Gate (not secure, but simple) -->
+<div id="password-screen" style="
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-family: Aptos, Segoe UI, sans-serif;
+  z-index: 9999;
+">
+  <h2 style="font-size: 20px; font-weight: 600;">Enter Password</h2>
+  <input id="pw-input" type="password" placeholder="Password" 
+         style="padding: 10px 14px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+  <button onclick="checkPW()" 
+          style="padding: 10px 16px; background: #0ea5e9; color: white; border-radius: 8px; cursor: pointer;">
+    Enter
+  </button>
+  <div id="pw-error" style="color: red; font-size: 14px; display: none;">Incorrect password</div>
+</div>
+
+<script>
+  function checkPW() {
+    const correct = "ftg2025";  // <<< CHANGE THIS TO YOUR PASSWORD
+    const entered = document.getElementById("pw-input").value;
+    if (entered === correct) {
+      document.getElementById("password-screen").style.display = "none";
+    } else {
+      document.getElementById("pw-error").style.display = "block";
+    }
+  }
+</script>
+
+
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
