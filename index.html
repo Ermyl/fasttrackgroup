@@ -1,116 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fast Track Group</title>
 
-<style>
-  body {
-    margin: 0;
-    background: #ffffff;
-    font-family: Aptos, Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
-    text-align: center;
-  }
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  h1 {
-    margin: 30px 0 40px;
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-  }
-
-  /* Page container */
-  .wrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 16px 60px;
-  }
-
-  /* Hero image blocks */
-  .hero-block {
-    position: relative;
-    margin-bottom: 60px;
-  }
-
-  .hero-img {
-    width: 100%;
-    max-height: 650px;
-    object-fit: cover;
-    border-radius: 24px;
-    display: block;
-  }
-
-  /* Hover zoom only on the clickable one (desktop feel) */
-  .clickable:hover .hero-img {
-    transform: scale(1.03);
-    cursor: pointer;
-    transition: transform 0.5s ease;
-  }
-
-  /* Label styling */
-  .label {
-    position: absolute;
-    bottom: 30px;
-    left: 40px;
-    font-size: 40px;
-    font-weight: 700;
-    color: black;
-    text-shadow: 0 0 10px rgba(255,255,255,0.9);
-    letter-spacing: 0.02em;
-  }
-
-  /* 📱 Mobile tweaks */
-  @media (max-width: 768px) {
-    h1 {
-      margin: 20px 0 24px;
-      font-size: 20px;
-      letter-spacing: 0.14em;
+  <style>
+    body {
+      font-family: Aptos, Segoe UI, system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
     }
-
-    .wrapper {
-      padding: 0 12px 40px;
-    }
-
-    .hero-block {
-      margin-bottom: 32px;
-    }
-
-    .hero-img {
-      border-radius: 20px;
-      max-height: 420px;
-    }
-
-    .label {
-      font-size: 26px;
-      bottom: 16px;
-      left: 18px;
-      text-shadow: 0 0 6px rgba(255,255,255,0.9);
-    }
-  }
-</style>
-
+  </style>
 </head>
+<body class="bg-white text-neutral-900">
 
-<body>
-
-  <h1>FAST TRACK GROUP</h1>
-
-  <div class="wrapper">
-
-    <!-- Regional Malls (clickable) -->
-    <a href="https://www.fastrackgroup.co.nz/regionalmalls/" class="hero-block clickable">
-      <img src="hamilton-perspective.jpg" class="hero-img" alt="Regional Malls">
-      <div class="label">REGIONAL MALLS</div>
-    </a>
-
-    <!-- Club 55 (not clickable) -->
-    <div class="hero-block">
-      <img src="ai-c55-otaki.jpg" class="hero-img" alt="Club 55">
-      <div class="label">CLUB 55</div>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <span class="font-semibold tracking-wide">Fast Track Group</span>
+      <a href="mailto:info@i4c.co.nz"
+         class="inline-flex items-center rounded-xl bg-sky-600 text-white px-3 py-1.5 text-sm shadow-sm hover:bg-sky-700">
+        Contact
+      </a>
     </div>
+  </header>
 
-  </div>
+  <!-- Regional Malls -->
+  <section id="regional-malls" class="relative overflow-hidden bg-neutral-950 text-white">
+    <a href="https://www.fastrackgroup.co.nz/regionalmalls/" class="block relative">
+      <img 
+        src="./hamilton-perspective.jpg"
+        alt="Regional Malls"
+        class="absolute inset-0 h-full w-full object-cover" />
+
+      <div class="absolute inset-0 bg-black/50"></div>
+
+      <div class="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
+        <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">
+          REGIONAL MALLS
+        </h1>
+      </div>
+    </a>
+  </section>
+
+  <!-- Club 55 -->
+  <section id="club-55" class="relative overflow-hidden bg-neutral-950 text-white">
+    <img 
+      src="./ai-c55-otaki.jpg"
+      alt="Club 55"
+      class="absolute inset-0 h-full w-full object-cover" />
+
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div class="relative mx-auto max-w-6xl px-4 py-20 md:py-28">
+      <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight">
+        CLUB 55
+      </h2>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-neutral-600 flex items-center justify-between">
+      <div>© 2025 Fast Track Group</div>
+      <a href="mailto:info@i4c.co.nz" class="hover:text-sky-600">Contact</a>
+    </div>
+  </footer>
 
 </body>
 </html>
+
