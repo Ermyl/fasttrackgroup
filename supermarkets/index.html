@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>National Supermarket & Mall Rollout — NZ-Owned</title>
+  <meta name="description" content="A new NZ-owned supermarket chain of 20 regional hubs that anchor National Malls — bringing together everyday shopping, dining, and entertainment under one roof." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+  </style>
+</head>
+<body class="bg-white text-neutral-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-xl bg-emerald-600"></div>
+        <span class="font-extrabold tracking-tight">National Supermarket & Mall Rollout</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#overview" class="hover:text-emerald-700">Overview</a>
+        <a href="#engine" class="hover:text-emerald-700">Fast‑Track Engine</a>
+        <a href="#sites" class="hover:text-emerald-700">20 Sites</a>
+        <a href="#sustainability" class="hover:text-emerald-700">Energy</a>
+        <a href="#suppliers" class="hover:text-emerald-700">Suppliers</a>
+        <a href="#fasttrack" class="hover:text-emerald-700">Policy</a>
+        <a href="#contact" class="hover:text-emerald-700">Contact</a>
+      </nav>
+     <a href="#contact" 
+   class="flex justify-center items-center rounded-xl bg-emerald-600 px-4 py-2 text-white font-semibold shadow-sm hover:bg-emerald-700 text-center">
+  Register interest
+</a>
+
+
+
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <img src="hero-supermarket.jpg" alt="Modern large-format supermarket with rooftop solar" class="h-full w-full object-cover" />
+      <div class="absolute inset-0 bg-neutral-900/60"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-4 py-24 md:py-36">
+      <div class="max-w-3xl text-white">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">A new NZ Supermarket —
+          <span class="block">powering Regional Entertainment Malls</span>
+          <span class="block">and Local Communities</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-neutral-100">20 large-format stores (15,000–20,000 m²), each doubling as a regional hub. Fast‑Track ready. NZ‑owned. Built for competition, energy resilience, and community outcomes.</p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#fasttrack" class="rounded-xl bg-white px-5 py-3 font-semibold text-neutral-900 hover:bg-neutral-100">Fast‑Track brief</a>
+          <a href="#sites" class="rounded-xl bg-emerald-600 px-5 py-3 font-semibold text-white hover:bg-emerald-700">See the 20 sites</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+<section id="overview" class="py-16 md:py-20 border-b border-neutral-200 bg-white">
+  <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Text content -->
+    <div>
+      <h2 class="text-2xl md:text-3xl font-extrabold">Overview</h2>
+      <p class="mt-4 text-neutral-700">
+        We are establishing a New Zealand–owned, next-generation supermarket chain — a network of 20 regional hubs co-located with National Malls where strategic. Each hub supplies local retailers, cafés, dairies and delivery providers directly, eliminating national warehouses and reducing food miles.
+      </p>
+      <ul class="mt-6 space-y-3 text-neutral-800">
+        <li class="flex gap-3">
+          <span class="mt-1 h-2 w-2 rounded-full bg-emerald-600"></span>
+          <span>~2,000 fastest-moving lines at cost or below; 100,000+ total product range.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-1 h-2 w-2 rounded-full bg-emerald-600"></span>
+          <span>Uniform national pricing to end regional price discrimination.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="mt-1 h-2 w-2 rounded-full bg-emerald-600"></span>
+          <span>“Local First” areas to showcase regional producers and startups.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Interactive image -->
+    <div x-data="{ open: false }" class="relative">
+      <!-- Thumbnail -->
+      <img
+        @click="open = true"
+        src="map-nz-sites.png"
+        alt="Map of New Zealand showing 20 regional sites"
+        class="w-full rounded-2xl shadow cursor-pointer transition-transform hover:scale-[1.02]"
+      />
+      <div class="absolute bottom-4 right-4 rounded-xl bg-white/90 px-4 py-2 text-sm font-semibold shadow">
+        20 National Sites
+      </div>
+
+      <!-- Fullscreen overlay -->
+      <div
+        x-show="open"
+        @click="open = false"
+        x-transition
+        class="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+      >
+        <img
+          src="map-nz-sites.png"
+          alt="Map enlarged"
+          class="max-w-5xl w-full rounded-2xl shadow-lg transform transition-transform duration-300 scale-100 hover:scale-105"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ <!-- Fast-Track Engine -->
+<section id="engine" class="py-16 md:py-20 bg-neutral-50 border-b border-neutral-200">
+  <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Left column: text (centered vertically) -->
+    <div class="self-center">
+      <h2 class="text-3xl font-extrabold text-neutral-900">The Fast-Track Engine</h2>
+      <p class="mt-4 text-neutral-700 leading-relaxed">
+        Supermarkets unlock the consent. Malls create the profit.
+        Our supermarket chain qualifies as nationally significant commercial infrastructure,
+        activating the <span class="font-semibold">Fast-Track Approvals Amendment (FTAA “Fast Lane”)</span>
+        for simultaneous multi-site consenting.
+      </p>
+      <p class="mt-4 text-neutral-700 leading-relaxed">
+        This dual-layer model aligns policy, planning and profit — supermarkets drive eligibility,
+        malls deliver financial sustainability, and both advance New Zealand’s cost-of-living objectives.
+      </p>
+    </div>
+
+    <!-- Right column: cards -->
+    <div class="grid gap-6">
+      <div class="rounded-2xl bg-white shadow-sm border p-6 hover:shadow-md transition">
+        <p class="text-emerald-700 font-semibold text-sm mb-1">Layer 1</p>
+        <h3 class="font-bold text-lg">Supermarkets (20 hubs)</h3>
+        <p class="mt-2 text-neutral-700 text-sm leading-relaxed">
+          Operate near break-even to win the price war and public trust.
+          Each hub serves local retailers and delivery providers directly.
+        </p>
+      </div>
+
+      <div class="rounded-2xl bg-white shadow-sm border p-6 hover:shadow-md transition">
+        <p class="text-emerald-700 font-semibold text-sm mb-1">Layer 2</p>
+        <h3 class="font-bold text-lg">National Malls (9 anchors)</h3>
+        <p class="mt-2 text-neutral-700 text-sm leading-relaxed">
+          Primary profit centres through rental yield, traffic, energy integration and services.
+          Mall income cross-subsidises groceries, enabling a national low-price model.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+
+<!-- Sites Grid -->
+<section id="sites" class="py-16 md:py-20 bg-white border-b border-neutral-200">
+  <div class="mx-auto max-w-7xl px-4">
+
+    <!-- Header row -->
+    <div class="md:flex md:items-end md:justify-between">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold">The 20 Sites</h2>
+        <p class="mt-3 text-neutral-700 max-w-3xl">
+          Nine mall-anchored and eleven stand-alone or co-located with big-box retailers. Centrally located within regional catchments to minimise travel distances and emissions.
+        </p>
+      </div>
+
+      <!-- Updated button -->
+      <a href="#contact"
+         class="mt-6 md:mt-0 flex items-center justify-center whitespace-nowrap rounded-xl bg-emerald-600 px-5 py-2.5 text-white font-semibold leading-none shadow-sm hover:bg-emerald-700">
+        Partner with us
+      </a>
+    </div>
+    <!-- Grid -->
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+      <!-- Whangārei -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Whangārei</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Under discussion</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Auckland — Silverdale -->
+      <div class="rounded-2xl border p-4" style="background-color: #FAFAFA;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Auckland — Silverdale</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Under discussion</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Mall</p>
+      </div>
+
+      <!-- Auckland — Ormiston -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Auckland — Ormiston</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-slate-100 text-slate-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Early stage</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Auckland — Whenuapai -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Auckland — Whenuapai</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-slate-100 text-slate-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Early stage</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Auckland — Māngere -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Auckland — Māngere</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Under discussion</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Auckland — Paerata -->
+      <div class="rounded-2xl border p-4" style="background-color: #FAFAFA;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Auckland — Paerata</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Advanced</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Mall</p>
+      </div>
+
+      <!-- Hamilton -->
+      <div class="rounded-2xl border p-4" style="background-color: #FAFAFA;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Hamilton</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Ready to Go</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Mall</p>
+      </div>
+
+      <!-- Tauranga -->
+      <div class="rounded-2xl border p-4" style="background-color: #FAFAFA;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Tauranga</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Under discussion</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Mall</p>
+      </div>
+
+      <!-- Rotorua -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Rotorua</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Under discussion</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Gisborne -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Gisborne</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-slate-100 text-slate-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Early stage</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Hawke’s Bay -->
+      <div class="rounded-2xl border p-4" style="background-color: #FAFAFA;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Hawke’s Bay (Napier / Hastings)</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Under discussion</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Mall</p>
+      </div>
+
+      <!-- New Plymouth -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">New Plymouth</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Under discussion</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Whanganui -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Whanganui</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-slate-100 text-slate-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Early stage</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Palmerston North -->
+      <div class="rounded-2xl border p-4" style="background-color: #FAFAFA;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Palmerston North</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Advanced</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Mall</p>
+      </div>
+
+      <!-- Wellington -->
+      <div class="rounded-2xl border p-4" style="background-color: #FAFAFA;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Wellington</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-green-100 text-green-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Ready to Go</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Mall</p>
+      </div>
+
+      <!-- Nelson -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Nelson</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Advanced</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Christchurch -->
+      <div class="rounded-2xl border p-4" style="background-color: #FAFAFA;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Christchurch</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Advanced</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Mall</p>
+      </div>
+
+      <!-- Timaru -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Timaru</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-slate-100 text-slate-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Early stage</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+      <!-- Dunedin -->
+      <div class="rounded-2xl border p-4" style="background-color: #FAFAFA;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Dunedin</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-amber-100 text-amber-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Under discussion</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Mall</p>
+      </div>
+
+      <!-- Invercargill -->
+      <div class="rounded-2xl border p-4" style="background-color: #FFFCF5;">
+        <div class="flex items-center justify-between">
+          <h3 class="font-bold">Invercargill</h3>
+          <span class="inline-flex items-center justify-center rounded-full bg-slate-100 text-slate-800 text-[11px] font-medium px-3 py-1 leading-none whitespace-nowrap">Early stage</span>
+        </div>
+        <p class="mt-1 text-sm text-neutral-600">Stand-alone</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Energy & Sustainability -->
+  <section id="sustainability" class="py-16 md:py-20 bg-neutral-50 border-b border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold">Energy & Sustainability</h2>
+        <p class="mt-4 text-neutral-700">Each site is a low‑carbon energy hub: rooftop solar with batteries, free EV charging, refrigeration heat‑recovery for mall HVAC and water heating, and all‑electric local fleets.</p>
+        <ul class="mt-6 space-y-3 text-neutral-800">
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-600"></span><span>Aligns with EECA’s decarbonisation and energy‑resilience objectives.</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-600"></span><span>Supports national EV uptake with customer and fleet charging.</span></li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-emerald-600"></span><span>Designed for grid support and peak shaving.</span></li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <img src="solar-roof.jpg" alt="Rooftop solar arrays on supermarket" class="w-full h-40 md:h-56 object-cover rounded-2xl shadow" />
+        <img src="ev-charging.jpg" alt="EV charging bays at mall carpark" class="w-full h-40 md:h-56 object-cover rounded-2xl shadow" />
+        <img src="mall-interior.jpg" alt="Modern mall interior" class="w-full h-40 md:h-56 object-cover rounded-2xl shadow" />
+        <img src="energy-heat-recovery.jpg" alt="Industrial refrigeration heat recovery schematic" class="w-full h-40 md:h-56 object-cover rounded-2xl shadow" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Suppliers Local First -->
+  <section id="suppliers" class="py-16 md:py-20 bg-white border-b border-neutral-200">
+    <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <img src="local-producers.jpg" alt="Local producers and artisan foods" class="w-full rounded-2xl shadow" />
+      </div>
+      <div class="order-1 md:order-2">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Local First — Suppliers</h2>
+        <p class="mt-4 text-neutral-700">Direct delivery to stores. No central warehouse. Dedicated shelves and stalls for regional suppliers inside every supermarket and mall.</p>
+        <p class="mt-4 text-neutral-700">We work with local producers, growers, and startups to bring regional flavour to every hub.<br/>If you’re a supplier, let’s talk.</p>
+        <div class="mt-6">
+          <a href="#contact" class="rounded-xl bg-emerald-600 px-4 py-2 text-white font-semibold hover:bg-emerald-700">Become a supplier</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Policy / Fast-Track -->
+<section id="fasttrack" class="py-16 md:py-20 bg-neutral-50 border-b border-neutral-200">
+  <div class="mx-auto max-w-7xl px-4">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      
+      <!-- Left Column -->
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Fast-Track (FTAA “Fast Lane”)</h2>
+        <p class="text-neutral-700">
+          Our programme qualifies under nationally significant commercial infrastructure: national economic benefit, competition and affordability, energy integration, job creation, and regional development. We will submit an Expression of Interest to the Ministry for the Environment and engage EECA, MBIE, and Treasury for aligned outcomes.
+        </p>
+        <ul class="mt-6 space-y-3 text-neutral-800">
+          <li class="flex gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-emerald-600"></span>
+            <span>Consumer benefit via real competition and uniform pricing.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-emerald-600"></span>
+            <span>Energy transition: solar, batteries, EV charging, heat recovery.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="mt-1 h-2 w-2 rounded-full bg-emerald-600"></span>
+            <span>Regional revitalisation through mall-anchored hubs.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Column -->
+      <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+        <h3 class="font-bold">Strategic Edge vs Duopoly</h3>
+        <div class="mt-4 overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-neutral-600">
+                <th class="py-2 pr-4">Feature</th>
+                <th class="py-2 pr-4">Our Chain</th>
+                <th class="py-2">Duopoly</th>
+              </tr>
+            </thead>
+            <tbody class="align-top">
+              <tr class="border-t">
+                <td class="py-2 pr-4 font-medium">Store Count</td>
+                <td class="py-2 pr-4">~20 regional hubs</td>
+                <td class="py-2">~380 small sites</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-2 pr-4 font-medium">Operating Hours</td>
+                <td class="py-2 pr-4">24 hours</td>
+                <td class="py-2">12–16 hours</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-2 pr-4 font-medium">Logistics</td>
+                <td class="py-2 pr-4">Direct supplier delivery</td>
+                <td class="py-2">Centralised warehouses</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-2 pr-4 font-medium">Pricing</td>
+                <td class="py-2 pr-4">Uniform nationwide</td>
+                <td class="py-2">Variable by region</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-2 pr-4 font-medium">Range</td>
+                <td class="py-2 pr-4">100,000+ lines</td>
+                <td class="py-2">~25,000 lines</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-2 pr-4 font-medium">Energy</td>
+                <td class="py-2 pr-4">Solar + free EV</td>
+                <td class="py-2">Grid electricity</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-2 pr-4 font-medium">Community Role</td>
+                <td class="py-2 pr-4">Mall anchor + hub</td>
+                <td class="py-2">Stand-alone retail</td>
+              </tr>
+              <tr class="border-t">
+                <td class="py-2 pr-4 font-medium">Ownership</td>
+                <td class="py-2 pr-4">NZ-owned</td>
+                <td class="py-2">Offshore-owned</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section id="contact" class="py-16 md:py-20 bg-neutral-900">
+  <div class="mx-auto max-w-7xl px-4 grid md:grid-cols-2 gap-10 items-center text-white">
+    
+    <!-- Left column: Text -->
+    <div>
+      <h2 class="text-2xl md:text-3xl font-extrabold">Partner, supply, invest, or support Fast-Track</h2>
+      <p class="mt-4 text-neutral-200">If you are a landowner, supplier, tenant, investor, council officer, or policy partner, we’d love to hear from you.</p>
+      <ul class="mt-6 space-y-3 text-neutral-100">
+        <li class="flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
+          Supermarket & Mall partnerships
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
+          Supplier onboarding (Local First)
+        </li>
+        <li class="flex items-center gap-2">
+          <span class="h-1.5 w-1.5 rounded-full bg-white"></span>
+          Fast-Track & consenting collaboration
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right column: Brevo form -->
+    <div class="rounded-2xl bg-white p-8 shadow-lg">
+      <iframe
+        src="https://8c3cb967.sibforms.com/serve/MUIFAJ3k2oCMm03clKyLfalxmaaPVgE7IFyBIPp6oY3WZP4RrADY2bAucx017Tt7e7uRoZRlBgndFjlXAMiMT_fR5Bxh9DqgY-iy3vrueSzb7MiZoxobq4mPiYQo2LeshFY4Laz745MWmPVSHEj6OLh_Cbzu5wvkc2oM8dZBIFS3soqIB5luwQxxBBqM652RWfAotlvJFbzC3OZuIg=="
+        style="width:100%; height:850px; border:0; background:white;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Register your interest form">
+      </iframe>
+
+      <p class="mt-3 text-xs text-neutral-600 text-center">
+        Having trouble?
+        <a class="underline" href="https://8c3cb967.sibforms.com/serve/MUIFAJ3k2oCMm03clKyLfalxmaaPVgE7IFyBIPp6oY3WZP4RrADY2bAucx017Tt7e7uRoZRlBgndFjlXAMiMT_fR5Bxh9DqgY-iy3vrueSzb7MiZoxobq4mPiYQo2LeshFY4Laz745MWmPVSHEj6OLh_Cbzu5wvkc2oM8dZBIFS3soqIB5luwQxxBBqM652RWfAotlvJFbzC3OZuIg==" target="_blank" rel="noopener">
+          Open the form in a new tab
+        </a>.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+ <body x-data="{ openPrivacy: false }" class="bg-white text-neutral-900">
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 bg-white relative">
+    <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-neutral-600 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p>&copy; <span id="y"></span> National Supermarket & Mall Rollout — NZ-Owned.</p>
+      <div class="flex items-center gap-4">
+        <a href="#overview" class="hover:text-neutral-900">Overview</a>
+        <a href="#fasttrack" class="hover:text-neutral-900">Fast-Track</a>
+        <a href="#sites" class="hover:text-neutral-900">Sites</a>
+        <a href="mailto:remy@i4c.co.nz" class="hover:text-neutral-900">Contact</a>
+        <a href="#privacy" @click.prevent="openPrivacy = true" class="hover:text-neutral-900">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy popup -->
+  <div 
+    x-show="openPrivacy"
+    x-transition
+    @click.self="openPrivacy = false"
+    class="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+    <div class="bg-white max-w-lg mx-4 rounded-2xl p-6 shadow-lg text-neutral-800 relative">
+      <h2 class="text-2xl font-bold mb-3">Privacy Policy</h2>
+      <p class="text-sm mb-3">
+        We collect only the information you choose to share when registering your interest.
+        This data is used solely for project updates and will never be sold or shared.
+      </p>
+      <p class="text-sm mb-3">
+        To remove your information, email 
+        <a href="mailto:remy@i4c.co.nz" class="underline text-emerald-600">remy@i4c.co.nz</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script>
+    // Auto-update year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
