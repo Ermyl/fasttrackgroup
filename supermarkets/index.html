@@ -17,6 +17,40 @@
 <body class="bg-white text-neutral-900">
 
   
+<!-- Password Gate (simple overlay) -->
+  <div id="password-screen" style="
+    position: fixed;
+    inset: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    z-index: 9999;
+  ">
+    <h2 style="font-size: 20px; font-weight: 600;">Enter Password</h2>
+    <input id="pw-input" type="password" placeholder="Password"
+           style="padding: 10px 14px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+    <button onclick="checkPW()"
+            style="padding: 10px 16px; background: #059669; color: white; border-radius: 8px; cursor: pointer;">
+      Enter
+    </button>
+    <div id="pw-error" style="color: red; font-size: 14px; display: none;">Incorrect password</div>
+  </div>
+
+  <script>
+    function checkPW() {
+      const correct = "ftg2025"; // change this if you want a different password
+      const entered = document.getElementById("pw-input").value;
+      if (entered === correct) {
+        document.getElementById("password-screen").style.display = "none";
+      } else {
+        document.getElementById("pw-error").style.display = "block";
+      }
+    }
+  </script>
 
 
   <!-- Header -->
